@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all.order(created_at: :desc)
+  end
+
   private
 
   def user_params

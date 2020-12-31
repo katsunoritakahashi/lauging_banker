@@ -20,7 +20,8 @@
 }
 
  h1{ 
-  font-family: "M PLUS Rounded 1c";
+  font-family: "Hannari";;
+  font-weight: 1000;
 }
 .font_red {
   color: #F44336;     /* 文字色指定 */
@@ -70,6 +71,19 @@
   margin: 0;
   padding: 0;
 }
+li{
+  text-align: left;
+  .image_list{
+    float: left;
+  }
+  .image_arrow{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .money{
+    font-size: xxx-large;
+  }
+}
 
 .balloon3 {
   position: relative;
@@ -84,4 +98,14 @@
   border: solid 3px #fff;
   box-sizing: border-box;
   border-radius: 30px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+  }
 }
