@@ -12,20 +12,20 @@
       <div class="balloon3">
         <p>「笑ゥふぁいなんしゃるぷらんなぁ」は、<br>
             貧困に悩むあなたを、<span class="font_red">「１年」で億万長者</span>に変えてくれます。<br>
-            あなたも億万長者になる為、ぷらんなぁに人生を託してみませんか？
+            あなたも億万長者になる為、<br class="visible-xs-block">ぷらんなぁに人生を託してみませんか？
         </p>
       </div>
       <%= form_with model: @user, local: true do |f| %>
           <div class="form-group">
-            <%= f.label :name %>
+            <%= f.label :お名前 %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :income %>
+            <%= f.label :年収 %>
             <%= f.text_field :income, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :saving %>
+            <%= f.label :貯金 %>
             <%= f.email_field :saving, class: 'form-control' %>
           <br><br>
           <div class="actions">
