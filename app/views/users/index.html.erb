@@ -11,13 +11,20 @@
           <% @investments.each do |investment| %>
             <li>
               <%= image_tag 'moguro.png',width: '100px', height: '120px', class: "image_list" %>
-              <%= investment.user.name %>
+              <%= "・#{investment.user.name}" %>
               <% if investment.total > 30000 %>
                 <span class="font_yellow"><%= "　→　クリア！" %></span>
               <% else %>
                 <span class="font_red"><%= "　→　破産" %></span>
               <% end %>
-              <br><br><%= "最終：#{investment.total / 10000.to_f.round(1)}億円"%><br><%= "（株: #{investment.stock}万円、債権: #{investment.bonds}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <br><br>
+              <% if investment.total > 30000 %>
+              <span><%= "最終：" %></span>
+              <span class="font_yellow"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <% else %>
+              <span><%= "最終：" %></span>
+              <span class="font_red"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <% end %>
             </li>
           <% end %>
         <% else %>

@@ -11,23 +11,23 @@
         </span>
       </h1>
       <div class="balloon3">
-        <p>喪黒金造は、<br><%= "貧困に悩む#{current_user.name}に、" %><span class="font_red">1億円</span>を貸してくれました。<br>
+        <p>喪黒金造は、<br><%= "貧困に悩む#{current_user.name}に、" %><br class="visible-xs-block"><span class="font_red">1億円</span>を貸してくれました。<br>
             ただし1年後には、<span class="font_red">3億円</span>で<br class="visible-xs-block">返さなくてはいけません。<br>投資でお金を増やしましょう。<br><br>もし返せなかったら。。。
         </p>
       </div>
       <%= form_with model: @investment, local: true do |f| %>
           <div class="form-group">
-            <%= f.label :ハイリスク＆ハイリターン：株 %>
-            <br><%= f.select :stock, [["投資しない", "0"],["1,000万円", "1000"], ["2,000万円", "2000"], ["3,000万円", "3000"], ["4,000万円", "4000"], ["5,000万円", "5000"], ["6,000万円", "6000"], ["7,000万円", "7000"], ["8,000万円", "8000"], ["9,000万円", "9000"], ["1億円", "10000"]], include_blank: "選択して下さい", class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :ローリスク＆ローリターン：債権  %>
+            <span class="font_green"><%= f.label :①債権（低リスク＆低リターン） %></span>
             <br><%= f.select :bonds, [["投資しない", "0"],["1,000万円", "1000"], ["2,000万円", "2000"], ["3,000万円", "3000"], ["4,000万円", "4000"], ["5,000万円", "5000"], ["6,000万円", "6000"], ["7,000万円", "7000"], ["8,000万円", "8000"], ["9,000万円", "9000"], ["1億円", "10000"]], include_blank: "選択して下さい", class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :ハイリスク＆ローリターン：パチンコ  %>
+            <span class="font_yellow"><%= f.label :②株式（高リスク＆高リターン）  %></span>
+            <br><%= f.select :stock, [["投資しない", "0"],["1,000万円", "1000"], ["2,000万円", "2000"], ["3,000万円", "3000"], ["4,000万円", "4000"], ["5,000万円", "5000"], ["6,000万円", "6000"], ["7,000万円", "7000"], ["8,000万円", "8000"], ["9,000万円", "9000"], ["1億円", "10000"]], include_blank: "選択して下さい", class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <span class="font_red"><%= f.label :③パチンコ（高リスク＆低リターン）  %></span>
             <br><%= f.select :pachinko, [["散財しない", "0"],["1,000万円", "1000"], ["2,000万円", "2000"], ["3,000万円", "3000"], ["4,000万円", "4000"], ["5,000万円", "5000"], ["6,000万円", "6000"], ["7,000万円", "7000"], ["8,000万円", "8000"], ["9,000万円", "9000"], ["1億円", "10000"]], include_blank: "選択して下さい", class: 'form-control' %>
-          <br><br>※残額は貯金になります。<br><br>
+          <br><br>※残額は④貯金（無リスク＆無リターン）<br class="visible-xs-block">になります。<br><br>
           <div class="actions">
             <%= f.submit '投資する', class: 'btn btn-default btn-lg' %>
           </div>

@@ -22,11 +22,11 @@
           <% @investments.each do |investment| %>
             <li>
               <%= "#{investment.month}ヶ月目" %>
-              <br><%= "#{investment.total / 10000.to_f.round(1)}億円（株: #{investment.stock}万円、債権: #{investment.bonds}万円、" %><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <br><%= "#{investment.total / 10000.to_f.round(1)}億円（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、" %><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
             </li>
           <% end %>
         <% else %>
-          <p><%= '人生設計がありません' %></p>
+          <p><%= '投資結果がありません' %></p>
         <% end %>
       </div>
     </div>
