@@ -3,7 +3,7 @@
     <div class="col-12">
       <h1>
         <span>1年後、、、</span>
-        <span class="font_red"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <br class="visible-xs-block"><span class="font_red"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
       </h1>
       <h1 class="font_red">
         <% if @result.total > 30000 %>
@@ -11,7 +11,7 @@
           <br><span class="font_yellow"><%= "#{current_user.name}は無事借金を返済できました" %></span>
         <% else %>
           <%= image_tag 'moguro.png',width: '25%', height: '25%', class: "image_list" %>
-          <br><%= "#{current_user.name}は破滅を迎えました" %>
+          <br><%= "#{current_user.name}は破産しました" %>
         <% end %>
       </h1>
 
@@ -22,7 +22,7 @@
           <% @investments.each do |investment| %>
             <li>
               <%= "#{investment.month}ヶ月目" %>
-              <br><%= "#{investment.total / 10000.to_f.round(1)}億円（株: #{investment.stock}万円、債権: #{investment.bonds}万円、パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <br><%= "#{investment.total / 10000.to_f.round(1)}億円（株: #{investment.stock}万円、債権: #{investment.bonds}万円、" %><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
             </li>
           <% end %>
         <% else %>

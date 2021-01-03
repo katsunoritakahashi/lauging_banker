@@ -15,9 +15,9 @@
               <% if investment.total > 30000 %>
                 <span class="font_yellow"><%= "　→　クリア！" %></span>
               <% else %>
-                <span class="font_red"><%= "　→　破滅" %></span>
+                <span class="font_red"><%= "　→　破産" %></span>
               <% end %>
-              <br><br><%= "#{investment.total / 10000.to_f.round(1)}億円（株: #{investment.stock}万円、債権: #{investment.bonds}万円、パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <br><br><%= "最終：#{investment.total / 10000.to_f.round(1)}億円"%><br><%= "（株: #{investment.stock}万円、債権: #{investment.bonds}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
             </li>
           <% end %>
         <% else %>
