@@ -3,15 +3,20 @@
     <div class="col-12">
       <h1>
         <span>1年後、、、</span>
-        <br class="visible-xs-block"><span class="font_red"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <br class="visible-xs-block">
+        <% if @result.total > 30000 %>
+        <span class="font_green"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <% else %>
+        <span class="font_red"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <% end %>
       </h1>
       <h1 class="font_red">
         <% if @result.total > 30000 %>
           <%= image_tag 'moguro.png',width: '300px', height: '350px', class: "image_list" %>
-          <br><span class="font_yellow"><%= "#{current_user.name}は無事借金を返済できました" %></span>
+          <br><span class="font_green"><%= "#{current_user.name}は"%></span><span class="font_green"><br class="visible-xs-block">無事借金を返済できました！</span>
         <% else %>
           <%= image_tag 'moguro.png',width: '300px', height: '350px', class: "image_list" %>
-          <br><%= "#{current_user.name}は破産しました" %>
+          <br><span><%= "#{current_user.name}は"%></span><span><br class="visible-xs-block">破産しました</span>
         <% end %>
       </h1>
 
@@ -21,8 +26,13 @@
         <% if @investments.present? %>
           <% @investments.each do |investment| %>
             <li>
-              <%= "#{investment.month}ヶ月目" %>
-              <br><%= "#{investment.total / 10000.to_f.round(1)}億円（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、" %><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <% if investment.total > 30000 %>
+                <%= "#{investment.month}ヶ月目" %>
+                <span class="font_green"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <% else %>
+                <%= "#{investment.month}ヶ月目" %>
+                <span class="font_red"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+              <% end %>
             </li>
           <% end %>
         <% else %>
