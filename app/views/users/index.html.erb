@@ -8,6 +8,9 @@
       <div>
         <%= link_to '戻る', root_path %>
       </div>
+
+      <%= will_paginate @investments, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
+
       <div class="users">
         <% if @investments.present? %>
           <% @investments.each do |investment| %>
@@ -33,6 +36,9 @@
           <p><%= 'まだ誰も相談していません' %></p>
         <% end %>
       </div>
+
+      <%= will_paginate @investments, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
+
     </div>
   </div>
   <div>
