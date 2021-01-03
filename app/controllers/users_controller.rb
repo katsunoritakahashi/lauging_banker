@@ -6,20 +6,28 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_path
+      log_in @user
+      redirect_to new_investment_path
     else
-      flash.now[:danger] = '人生を託すことが出来ませんでした'
+      flash.now[:danger] = '名前が未入力、もしくは既に使われています'
       render :new
     end
   end
 
   def index
     @users = User.all.order(created_at: :desc)
+    @investments = Investment.where(month: 12).order(created_at: :desc)
+  end
+
+  def destroy
+    @user = User.find_by(id: session[:user_id])
+    @user.destroy
+    redirect_to root_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :saving, :income)
+    params.require(:user).permit(:name)
   end
 end

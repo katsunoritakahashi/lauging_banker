@@ -1,5 +1,5 @@
 class User < ApplicationRecord
+  has_many :investments, dependent: :destroy
   validates :name, presence: true, length: { maximum: 20 }
-  validates :saving, presence: true, length: { maximum: 10 }
-  validates :income, presence: true, length: { maximum: 10 }
+  validates :name, uniqueness: true
 end

@@ -10,14 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_31_011227) do
+ActiveRecord::Schema.define(version: 2021_01_02_103141) do
+
+  create_table "investments", force: :cascade do |t|
+    t.integer "month"
+    t.integer "stock"
+    t.integer "bonds"
+    t.integer "pachinko"
+    t.integer "saving"
+    t.integer "total"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_investments_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "income"
-    t.integer "saving"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "investments", "users"
 end

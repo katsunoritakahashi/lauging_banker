@@ -1,41 +1,39 @@
 <%= render 'shared/flash_message' %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h1>
-        <span class="font_red">
-          笑ゥ
-        </span>
-        <br class="visible-xs-block"><span>
-          ふぁいなんしゃる<br class="visible-xs-block">ぷらんなぁ とは
-        </span>
-      </h1>
-      <div class="balloon3">
-        <p>「笑ゥふぁいなんしゃるぷらんなぁ」は、<br>
-            貧困に悩むあなたを、<span class="font_red">「１年計画」で億万長者</span>に変えてくれます。<br>
-            あなたも億万長者になる為、<br class="visible-xs-block">ぷらんなぁに人生を託してみませんか？
-        </p>
+
+<html>
+  <head>
+    <!--フォントの読み込み-->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+    <h1>
+      <span class="font_red">
+        笑ゥ
+      </span>
+      <br class="visible-xs-block"><span>
+        ぎんこうまん
+      </span>
+    </h1>
+    <div class="balloon2">
+      <p>私の名は喪黒<span class="font_yellow">金</span>造、人呼んで<br class="visible-xs-block">「笑ゥぎんこうまん」。<br>私の取り扱う品物は<span class="font_red">富</span>、<br class="visible-xs-block"><span class="font_red">人間の欲</span>でございます。<br class="visible-xs-block">ホーホッホッ…<br><br>
+      <p>この世は老いも若きも男も女も、<br class="visible-xs-block">貧乏人ばかり、<br>そんな皆さんの<span class="font_red">”財布”</span>をお埋め致します。<br><br><br class="visible-xs-block">さて、今日のお客様は…</p>
+    </div>
+    <br><%= image_tag 'moguro.png',width: '25%', height: '25%' %>
+    <br><br><%= form_with model: @user, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :お名前 %>
+        <%= f.text_field :name, class: 'form-control' %>
       </div>
-      <%= form_with model: @user, local: true do |f| %>
-          <div class="form-group">
-            <%= f.label :お名前 %>
-            <%= f.text_field :name, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :年収（万） %>
-            <%= f.number_field :income, class: 'form-control'%>
-          </div>
-          <div class="form-group">
-            <%= f.label :貯金（万） %>
-            <%= f.number_field :saving, class: 'form-control' %>
-          <br><br>
-          <div class="actions">
-            <%= f.submit '人生を託す', class: 'btn btn-default btn-lg' %>
-          </div>
-      <% end %>
-      <div class='text-center'>
-        <%= link_to '他人の人生を見てみる', users_path %>
+      <div class="actions">
+        <%= f.submit '相談する', class: 'btn btn-default btn-lg' %>
       </div>
+    <% end %>
+
+          
+    <div class='text-center'>
+      <%= link_to '他人の人生を見てみる', users_path %>
     </div>
   </div>
-</div>
+  </body>
+</html>

@@ -5,20 +5,23 @@
         <span>みんなの</span>
         <span class="font_red">成れ果て</span>
       </h1>
+
       <div class="users">
-        <% if @users.present? %>
-          <% @users.each do |user| %>
+        <% if @investments.present? %>
+          <% @investments.each do |investment| %>
             <li>
-              <%= image_tag 'maxresdefault.jpg',width: '25%', height: '25%', class: "image_list" %>
-              <%= user.name %>
-              <br><%= "年収: #{user.income}万円" %>
-              <br><%= "貯金: #{user.saving}万円" %>
-              <%= image_tag 'sozai_cman_jp_20201231233007.png',width: '5%', height: '5%', class: "image_arrow" %>
-              <%= "3.5億！" %>
+              <%= image_tag 'moguro.png',width: '5%', height: '5%', class: "image_list" %>
+              <%= investment.user.name %>
+              <% if investment.total > 30000 %>
+                <span class="font_yellow"><%= "　→　クリア！" %></span>
+              <% else %>
+                <span class="font_red"><%= "　→　破滅" %></span>
+              <% end %>
+              <br><br><%= "#{investment.total / 10000.to_f.round(1)}億円（株: #{investment.stock}万円、債権: #{investment.bonds}万円、パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
             </li>
           <% end %>
         <% else %>
-          <p><%= '人生設計がありません' %></p>
+          <p><%= 'まだ誰も相談していません' %></p>
         <% end %>
       </div>
     </div>

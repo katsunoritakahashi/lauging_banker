@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: 1
+  stock: 1
+  bonds: 1
+  pachinko: 1
+  saving: 1
+  total: 1
+  user: one
+
+two:
+  month: 1
+  stock: 1
+  bonds: 1
+  pachinko: 1
+  saving: 1
+  total: 1
+  user: two
