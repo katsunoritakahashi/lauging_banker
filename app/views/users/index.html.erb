@@ -5,7 +5,9 @@
         <span>みんなの</span>
         <span class="font_red">成れ果て</span>
       </h1>
-
+      <div>
+        <%= link_to '戻る', root_path %>
+      </div>
       <div class="users">
         <% if @investments.present? %>
           <% @investments.each do |investment| %>

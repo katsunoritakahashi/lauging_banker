@@ -19,7 +19,9 @@
           <br><span><%= "#{current_user.name}は"%></span><span><br class="visible-xs-block">破産しました</span>
         <% end %>
       </h1>
-
+      <div>
+        <%= link_to '戻る', logout_path, method: :delete %>
+      </div>
       <%= line_chart Investment.where(user_id: current_user.id).pluck(:month, :total), curve: false, discrete: true, colors: ["#fff", "#fff"] %>
 
       <div class="users">
