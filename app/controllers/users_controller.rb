@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @investments = Investment.where(month: 12).paginate(page: params[:page], per_page: 10).order(created_at: :desc)
+    @investments = Investment.where(month: 12).paginate(page: params[:page], per_page: 20).order(created_at: :desc)
   end
 
   def destroy
