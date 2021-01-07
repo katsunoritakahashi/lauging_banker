@@ -21,10 +21,10 @@
       </h1>
       <div>
         <% if @result.total > 30000 %>
-          <%= link_to 'Twitterに投稿する', "https://twitter.com/intent/tweet?text=%E7%84%A1%E4%BA%8B%E3%81%AB%E8%BF%94%E6%B8%88%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A%E3%82%82%E3%81%86%E9%97%87%E9%87%91%E3%81%AA%E3%82%93%E3%81%A6%E6%80%96%E3%81%8F%E3%81%AA%E3%81%84%EF%BC%81%0Acryptic-retreat-09777.herokuapp.com", class: 'btn btn-default btn-lg' %>
+          <%= link_to 'Twitterに投稿する', "https://twitter.com/intent/tweet?text=%E7%84%A1%E4%BA%8B%E3%81%AB%E8%BF%94%E6%B8%88%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A%E3%82%82%E3%81%86%E9%97%87%E9%87%91%E3%81%AA%E3%82%93%E3%81%A6%E6%80%96%E3%81%8F%E3%81%AA%E3%81%84%EF%BC%81%0Ahttps%3A%2F%2Fcryptic-retreat-09777.herokuapp.com%2F", class: 'btn btn-default btn-lg' %>
           <br><br><%= link_to '戻る', logout_path, method: :delete %>
         <% else %>
-          <%= link_to 'Twitterに投稿する', "https://twitter.com/intent/tweet?text=%E8%A6%8B%E4%BA%8B%E3%81%AB%E7%A0%B4%E7%94%A3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0A%E3%81%8A%E9%87%91%E3%81%AF%E5%A4%A7%E5%88%87%E3%81%AB%E4%BD%BF%E3%81%84%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82%0Acryptic-retreat-09777.herokuapp.com", class: 'btn btn-default btn-lg' %>
+          <%= link_to 'Twitterに投稿する', "https://twitter.com/intent/tweet?text=%E7%A0%B4%E7%94%A3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A%E3%81%8A%E9%87%91%E3%81%AF%E5%A4%A7%E5%88%87%E3%81%AB%E3%80%82%E3%80%82%E3%80%82%0Ahttps%3A%2F%2Fcryptic-retreat-09777.herokuapp.com%2F", class: 'btn btn-default btn-lg' %>
           <br><br><%= link_to '戻る', logout_path, method: :delete %>
         <% end %>
       </div>
