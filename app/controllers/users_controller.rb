@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to new_investment_path
     else
-      flash.now[:danger] = '名前が未入力、もしくは既に使われています'
+      flash.now[:danger] = '名前が未入力です'
       render :new
     end
   end
