@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'users#new'
+  get '/static_pages/privacy_policy', to: 'static_pages#privacy_policy'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   resources :users, only: %i[new create index destroy]
