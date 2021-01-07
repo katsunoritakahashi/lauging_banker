@@ -33,6 +33,7 @@ gem 'chartkick'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'google-analytics-rails'
+gem 'yen'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

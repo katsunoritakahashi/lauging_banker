@@ -4,14 +4,14 @@
       <h1>
         <span>1年後、、、</span>
         <br class="visible-xs-block">
-        <% if @result.total > 30000 %>
-        <span class="font_green"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <% if @result.total > 300000000 %>
+        <span class="font_green"><%= "#{@result.total.to_j}円" %></span>
         <% else %>
-        <span class="font_red"><%= "#{@result.total / 10000.to_f.round(1)}億円" %></span>
+        <span class="font_red"><%= "#{@result.total.to_j}円" %></span>
         <% end %>
       </h1>
       <h1 class="font_red">
-        <% if @result.total > 30000 %>
+        <% if @result.total > 300000000 %>
           <%= image_tag 'moguro.png',width: '300px', height: '350px', class: "image_list" %>
           <br><span class="font_green"><%= "#{current_user.name}は"%></span><span class="font_green"><br class="visible-xs-block">無事借金を返済できました！</span>
         <% else %>
@@ -20,11 +20,11 @@
         <% end %>
       </h1>
       <div>
-        <% if @result.total > 30000 %>
-          <%= link_to 'Twitterに投稿する', url = "https://twitter.com/intent/tweet?text=1年後...#{@result.total / 10000.to_f.round(1)}億円！%0A「#{current_user.name}」は借金返して億万長者！もう闇金なんて怖くない！%0Ahttps://cryptic-retreat-09777.herokuapp.com/%0A%23笑ゥぎんこうまん", class: 'btn btn-default btn-lg' %>
+        <% if @result.total > 300000000 %>
+          <%= link_to 'Twitterに投稿する', url = "https://twitter.com/intent/tweet?text=1億円が1年後...#{@result.total.to_j}円！%0A「#{current_user.name}」は借金返して億万長者！もう闇金なんて怖くない！%0Ahttps://cryptic-retreat-09777.herokuapp.com/%0A%23笑ゥぎんこうまん", class: 'btn btn-default btn-lg' %>
           <br><br><%= link_to '戻る', logout_path, method: :delete %>
         <% else %>
-          <%= link_to 'Twitterで救いを求める', url = "https://twitter.com/intent/tweet?text=1年後...#{@result.total / 10000.to_f.round(1)}億円！%0A「#{current_user.name}」は借金を返せず破産しました。誰か助けて下さい！%0Ahttps://cryptic-retreat-09777.herokuapp.com/%0A%23笑ゥぎんこうまん", class: 'btn btn-default btn-lg' %>
+          <%= link_to 'Twitterで救いを求める', url = "https://twitter.com/intent/tweet?text=1億円が1年後...#{@result.total.to_j}円！%0A「#{current_user.name}」は借金を返せず破産しました。誰か助けて下さい！%0Ahttps://cryptic-retreat-09777.herokuapp.com/%0A%23笑ゥぎんこうまん", class: 'btn btn-default btn-lg' %>
           <br><br><%= link_to '戻る', logout_path, method: :delete %>
         <% end %>
       </div>
@@ -34,12 +34,12 @@
         <% if @investments.present? %>
           <% @investments.each do |investment| %>
             <li>
-              <% if investment.total > 30000 %>
+              <% if investment.total > 300000000 %>
                 <%= "#{investment.month}ヶ月目" %>
-                <span class="font_green"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+                <span class="font_green"><%= "#{investment.total.to_j}円"%></span><br><%= "（債権: #{investment.bonds.to_j}円、株式: #{investment.stock.to_j}円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko.to_j}円、貯金: #{investment.saving.to_j}円）" %>
               <% else %>
                 <%= "#{investment.month}ヶ月目" %>
-                <span class="font_red"><%= "#{investment.total / 10000.to_f.round(1)}億円"%></span><br><%= "（債権: #{investment.bonds}万円、株式: #{investment.stock}万円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko}万円、貯金: #{investment.saving}万円）" %>
+                <span class="font_red"><%= "#{investment.total.to_j}円"%></span><br><%= "（債権: #{investment.bonds.to_j}円、株式: #{investment.stock.to_j}円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko.to_j}円、貯金: #{investment.saving.to_j}円）" %>
               <% end %>
             </li>
           <% end %>

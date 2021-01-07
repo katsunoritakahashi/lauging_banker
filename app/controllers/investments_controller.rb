@@ -9,7 +9,7 @@ class InvestmentsController < ApplicationController
     @investment = Investment.new(investment_params)
     @investment.user_id = current_user.id
     if @investment.stock.present? && @investment.bonds.present? && @investment.pachinko.present?
-      @investment.saving = 10000 - @investment.stock - @investment.bonds - @investment.pachinko
+      @investment.saving = 100000000 - @investment.stock - @investment.bonds - @investment.pachinko
       @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
       @investment.month = 0
       if @investment.saving >= 0 && @investment.save
