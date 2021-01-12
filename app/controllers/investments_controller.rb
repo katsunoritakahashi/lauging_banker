@@ -14,7 +14,7 @@ class InvestmentsController < ApplicationController
       @investment.month = 0
       if @investment.saving >= 0 && @investment.save
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -22,7 +22,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -30,7 +30,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -38,7 +38,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -46,7 +46,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -54,7 +54,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -62,7 +62,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -70,7 +70,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -78,7 +78,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -86,7 +86,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -94,7 +94,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
@@ -102,7 +102,7 @@ class InvestmentsController < ApplicationController
         @investment.save
     
         @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..22) /11.to_f
+        @investment.stock = @investment.stock * rand(4..23) /11.to_f
         @investment.bonds = @investment.bonds * rand(8..16) /11.to_f
         @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
         @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
