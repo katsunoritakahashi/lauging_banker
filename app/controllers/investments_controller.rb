@@ -13,101 +13,16 @@ class InvestmentsController < ApplicationController
       @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
       @investment.month = 0
       if @investment.saving >= 0 && @investment.save
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 1
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 2
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 3
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 4
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 5
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 6
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 7
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 8
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 9
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 10
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 11
-        @investment.save
-    
-        @investment = @investment.dup
-        @investment.stock = @investment.stock * rand(4..23) /11.to_f
-        @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
-        @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
-        @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
-        @investment.month = 12
-        @investment.save
+        1.upto(12) do |num|
+          @investment = @investment.dup
+          @investment.stock = @investment.stock * rand(4..23) /11.to_f
+          @investment.bonds = @investment.bonds * rand(8..17) /11.to_f
+          @investment.pachinko = @investment.pachinko * rand(1..11) /10.to_f
+          @investment.total = @investment.stock + @investment.bonds + @investment.pachinko + @investment.saving
+          @investment.month = num
+          @investment.save
+        end
+        #binding.irb
         redirect_to @investment
       else
         flash.now[:danger] = '投資することが出来ませんでした'
