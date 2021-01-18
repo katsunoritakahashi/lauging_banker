@@ -1,0 +1,43 @@
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>
+        <span>成金</span>
+        <span class="font_red">らんきんぐ</span>
+      </h1>
+      <div>
+        <%= link_to '戻る', root_path %>
+      </div>
+
+      <div class="users">
+        <% if @investments.present? %>
+          <% @investments.each.with_index(1) do |investment, i| %>
+            <li>
+              <%= image_tag 'moguro.png',width: '100px', height: '120px', class: "image_list" %>
+              <%= "#{i}位：「#{investment.user.name}」" %>
+              <% if investment.total > 300000000 %>
+                <span class="font_green"><%= "　→　億万長者！" %></span>
+              <% else %>
+                <span class="font_red"><%= "　→　破産" %></span>
+              <% end %>
+              <br><br>
+              <% if investment.total > 300000000 %>
+              <span><%= "最終：" %></span>
+              <span class="font_green"><%= "#{investment.total.to_j}円"%></span><br><%= "（債権: #{investment.bonds.to_j}円、株式: #{investment.stock.to_j}円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko.to_j}円、貯金: #{investment.saving.to_j}円）" %>
+              <% else %>
+              <span><%= "最終：" %></span>
+              <span class="font_red"><%= "#{investment.total.to_j}円"%></span><br><%= "（債権: #{investment.bonds.to_j}円、株式: #{investment.stock.to_j}円、"%><br class="visible-xs-block"><%= "パチンコ: #{investment.pachinko.to_j}円、貯金: #{investment.saving.to_j}円）" %>
+              <% end %>
+            </li>
+          <% end %>
+        <% else %>
+          <p><%= 'まだ誰も相談していません' %></p>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <%= link_to '戻る', root_path %>
+  </div>
+</div>

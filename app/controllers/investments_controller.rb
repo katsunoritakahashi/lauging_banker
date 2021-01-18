@@ -44,6 +44,10 @@ class InvestmentsController < ApplicationController
     @investments = Investment.where(user_id: current_user.id).includes(:user).order(month: :asc)
   end
 
+  def index
+    @investments = Investment.where(month: 12).order(total: :desc).limit(10)
+  end
+
   private
 
   def investment_params
