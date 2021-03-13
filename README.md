@@ -15,6 +15,13 @@
 闇金『喪黒金造（もぐろかねぞう）』から借りたお金で
 億万長者を目指すゲームです。
 
+## 実績
+
+- ### <img src="https://img.shields.io/badge/-Qiita-55C500.svg?logo=&style=flat-square">Qiita記事189LGTM突破！
+- ### 累計PV数6,400突破！
+- ### 累計ユーザー数970突破！
+- ### [プログラミングスクール合同コンテスト「editch」予選出場！（プレゼン資料はこちら）](https://www.slideshare.net/secret/kc6LiiZKxTndfN)
+
 ## 使用画面と機能
 
 | トップページ                                                         | 利用規約                                                                                               |
