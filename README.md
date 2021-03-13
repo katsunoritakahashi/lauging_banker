@@ -1,26 +1,11 @@
 # 笑うぎんこうまん
 
 ![badge](https://img.shields.io/badge/thank%20you-for%20visiting-brightgreen)
-[![Rails](https://img.shields.io/badge/Rails-v6.1.3-%23a72332)](https://rubygems.org/gems/rails/versions/6.1.3)
-![top](https://user-images.githubusercontent.com/73891532/111021352-f9c86300-840e-11eb-9ae7-ed3f77b586c3.png)
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="60" height="60"/> 
-  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="60" height="60"/> 
-  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/> 
-  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="60" height="60"/> 
-  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="60" height="60"/> 
-  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60"/> 
+[![Rails](https://img.shields.io/badge/Rails-v6.1.0-%23a72332)](https://rubygems.org/gems/rails/versions/6.1.0)
+![moguro2](https://user-images.githubusercontent.com/73891532/111022341-90981e00-8415-11eb-8ed2-abfd1d915c29.png)
 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="60" height="60"/>
 
-</p>
-
-### **https://www.common-wallet.work/**
+### **https://cryptic-retreat-09777.herokuapp.com/**
 
 ## サービス概要
 
